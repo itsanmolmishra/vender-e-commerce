@@ -3,6 +3,8 @@ import { ArrowRight, PlayCircle, TrendingUp, ShoppingBag, Zap } from 'lucide-rea
 import { motion } from 'motion/react';
 
 export function Hero() {
+  const heroVideo = new URL('../../assets/PixVerse_V5.6_Image_Text_360P_Create_a_premium.mp4', import.meta.url).href;
+
   return (
     <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Enhanced Background Gradient */}
@@ -143,7 +145,7 @@ export function Hero() {
               
               {/* Hero Demo Video */}
               <video
-                src="/src/assets/PixVerse_V5.6_Image_Text_360P_Create_a_premium.mp4"
+                src={heroVideo}
                 autoPlay
                 muted
                 loop

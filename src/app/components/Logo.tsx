@@ -7,7 +7,7 @@ interface LogoProps {
   showTagline?: boolean;
 }
 
-const logoSrc = '/src/assets/logo.png';
+const logoSrc = new URL('../../assets/logo.png', import.meta.url).href;
 
 const sizeStyles = {
   sm: 'h-16',
