@@ -22,24 +22,17 @@ interface Process {
   description: string;
 }
 
-interface Package {
-  name: string;
-  price: string;
-  period: string;
-  features: string[];
-  popular?: boolean;
-}
-
 interface ServiceDetailPageProps {
   icon: LucideIcon;
   title: string;
   subtitle: string;
   description: string;
   gradient: string;
+  /** Optional Ceuki-branded banner from /public/services/heroes/ */
+  heroImage?: string;
   features: Feature[];
   benefits: Benefit[];
   process: Process[];
-  packages: Package[];
   faq?: { question: string; answer: string }[];
 }
 
@@ -49,10 +42,10 @@ export function ServiceDetailPage({
   subtitle,
   description,
   gradient,
+  heroImage,
   features,
   benefits,
   process,
-  packages,
   faq = []
 }: ServiceDetailPageProps) {
   const navigate = useNavigate();
@@ -60,9 +53,35 @@ export function ServiceDetailPage({
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+
+      {heroImage && (
+        <section className="pt-24 pb-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 18, scale: 0.985 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ type: 'spring', damping: 24, stiffness: 280, mass: 0.9 }}
+              className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-xl"
+            >
+              <motion.img
+                src={heroImage}
+                alt={`${title} — Ceuki India Pvt Ltd`}
+                className="w-full h-auto max-h-[min(22rem,46vw)] object-cover object-center sm:max-h-[min(26rem,40vw)]"
+                loading="eager"
+                decoding="async"
+                initial={{ scale: 1.04 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <section
+        className={`${heroImage ? 'pt-6 pb-20' : 'pt-32 pb-20'} px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white`}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -236,61 +255,6 @@ export function ServiceDetailPage({
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Packages */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Choose Your <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Package</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Flexible pricing options to match your business needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className={`relative ${pkg.popular ? 'lg:scale-105' : ''}`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
-                    <div className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-bold shadow-lg">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                <div className={`h-full bg-white rounded-3xl p-8 border-2 ${pkg.popular ? 'border-blue-500' : 'border-gray-200'} hover:border-blue-400 shadow-xl hover:shadow-2xl transition-all duration-300`}>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className={`text-5xl font-bold bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}>
-                      {pkg.price}
-                    </span>
-                    {pkg.period && <span className="text-gray-500">{pkg.period}</span>}
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {pkg.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button className={`w-full px-6 py-4 bg-gradient-to-r ${gradient} text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105`}>
-                    Choose Plan
-                  </button>
                 </div>
               </motion.div>
             ))}

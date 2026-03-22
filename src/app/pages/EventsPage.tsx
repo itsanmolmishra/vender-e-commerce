@@ -26,7 +26,7 @@ export function EventsPage() {
       type: 'Virtual',
       attendees: 500,
       image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800',
-      description: 'Join us for a deep dive into growth strategies across multiple platforms.',
+      description: 'Join us for a deep dive into growth strategies across multiple Partnership.',
       tags: ['Multi-Platform', 'Growth', 'Strategy'],
       gradient: 'from-purple-500 to-pink-500'
     },

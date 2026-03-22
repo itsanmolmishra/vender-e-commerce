@@ -1,5 +1,6 @@
 import { ShoppingCart, Shield, Zap, TrendingUp, Users, Clock } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function AmazonSellerCentral() {
   return (
@@ -9,6 +10,7 @@ export function AmazonSellerCentral() {
       subtitle="Complete Amazon Account Management"
       description="Professional end-to-end Amazon seller account management. From setup to scaling, we handle everything so you can focus on growing your business."
       gradient="from-orange-500 to-orange-600"
+      heroImage={serviceHeroImages['amazon-seller-central']}
       features={[
         {
           title: 'Account Setup & Verification',
@@ -87,54 +89,6 @@ export function AmazonSellerCentral() {
           step: 4,
           title: 'Growth & Scaling',
           description: 'Continuous optimization, performance tracking, and strategic expansion.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹9,999',
-          period: '/month',
-          features: [
-            'Amazon account setup & verification',
-            'Up to 25 product listings',
-            'Basic listing optimization',
-            'Order management support',
-            'Monthly performance reports',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹24,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Everything in Basic',
-            'Up to 100 product listings',
-            'Advanced SEO optimization',
-            'Amazon PPC management (₹50K/month ad spend)',
-            'Enhanced brand content (A+)',
-            'FBA inventory management',
-            'Weekly analytics & insights',
-            'Priority 24/7 support',
-            'Dedicated account manager'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Professional',
-            'Unlimited product listings',
-            'Full Amazon advertising suite',
-            'Brand registry & protection',
-            'International expansion support',
-            'Custom integrations',
-            'Dedicated team (3+ members)',
-            'White-glove onboarding',
-            'Strategic consulting calls'
-          ]
         }
       ]}
       faq={[

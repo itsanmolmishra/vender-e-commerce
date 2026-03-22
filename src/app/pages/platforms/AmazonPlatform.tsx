@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ShoppingCart, TrendingUp, Package, Users, Star, ArrowRight, CheckCircle, BarChart, Shield, Zap, Globe, Award } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
+import { PartnershipFocusSections } from '../../components/PartnershipFocusSections';
 import { useNavigate } from 'react-router';
 
 export function AmazonPlatform() {
@@ -84,53 +85,6 @@ export function AmazonPlatform() {
     { label: "Customer Rating", value: "4.5+", sublabel: "star average" }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "₹9,999",
-      period: "/month",
-      description: "Perfect for new Amazon sellers",
-      features: [
-        "Up to 50 product listings",
-        "Basic PPC campaign management",
-        "Monthly performance report",
-        "Email support",
-        "Product listing optimization"
-      ],
-      highlighted: false
-    },
-    {
-      name: "Professional",
-      price: "₹24,999",
-      period: "/month",
-      description: "For growing Amazon businesses",
-      features: [
-        "Up to 200 product listings",
-        "Advanced PPC & SEO optimization",
-        "A+ Content creation",
-        "Weekly analytics reports",
-        "Priority support & account manager",
-        "Promotional campaign management"
-      ],
-      highlighted: true
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "For established brands & high volume sellers",
-      features: [
-        "Unlimited product listings",
-        "Full-service account management",
-        "Dedicated team of specialists",
-        "Daily performance monitoring",
-        "24/7 priority support",
-        "Custom integrations & automation"
-      ],
-      highlighted: false
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Navbar />
@@ -181,6 +135,8 @@ export function AmazonPlatform() {
           </motion.div>
         </div>
       </section>
+
+      <PartnershipFocusSections brandName="Amazon" />
 
       {/* Success Metrics */}
       <section className="py-12 px-4 bg-white/50 backdrop-blur-sm">
@@ -297,88 +253,6 @@ export function AmazonPlatform() {
         </div>
       </section>
 
-      {/* Pricing Plans */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Amazon Management Packages
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect plan for your Amazon business growth
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative p-8 rounded-3xl shadow-xl transition-all hover:scale-105 ${
-                  plan.highlighted
-                    ? 'bg-gradient-to-br from-orange-500 to-blue-600 text-white'
-                    : 'bg-white border-2 border-gray-200'
-                }`}
-              >
-                {plan.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-yellow-400 text-gray-900 rounded-full font-bold text-sm shadow-lg">
-                    Most Popular
-                  </div>
-                )}
-                
-                <h3 className={`text-2xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
-                  {plan.name}
-                </h3>
-                <p className={`mb-6 ${plan.highlighted ? 'text-white/90' : 'text-gray-600'}`}>
-                  {plan.description}
-                </p>
-                
-                <div className="mb-6">
-                  <span className={`text-5xl font-bold ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
-                    {plan.price}
-                  </span>
-                  <span className={`text-lg ${plan.highlighted ? 'text-white/90' : 'text-gray-600'}`}>
-                    {plan.period}
-                  </span>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        plan.highlighted ? 'text-white' : 'text-green-500'
-                      }`} />
-                      <span className={plan.highlighted ? 'text-white' : 'text-gray-700'}>
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  onClick={() => navigate('/')}
-                  className={`w-full py-3 rounded-full font-semibold transition-all ${
-                    plan.highlighted
-                      ? 'bg-white text-blue-600 hover:bg-gray-100'
-                      : 'bg-gradient-to-r from-orange-500 to-blue-600 text-white hover:shadow-xl'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-orange-500 via-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -405,7 +279,7 @@ export function AmazonPlatform() {
                 onClick={() => navigate('/')}
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all"
               >
-                View All Platforms
+                View All Partnership
               </button>
             </div>
           </motion.div>

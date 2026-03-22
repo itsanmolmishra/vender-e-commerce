@@ -23,8 +23,8 @@ export function FAQ() {
       answer: 'Absolutely! Our Creative Services team provides professional product photography, image editing, compelling product descriptions, and SEO-optimized listings. This significantly improves your conversion rates and search rankings.'
     },
     {
-      question: 'How do you handle inventory across multiple platforms?',
-      answer: 'We use advanced inventory management systems that sync across all your marketplace accounts in real-time. This prevents overselling and ensures accurate stock levels across Amazon, Flipkart, Myntra, and other platforms.'
+      question: 'How do you handle inventory across multiple Partnership?',
+      answer: 'We use advanced inventory management systems that sync across all your marketplace accounts in real-time. This prevents overselling and ensures accurate stock levels across Amazon, Flipkart, Myntra, and other Partnership.'
     },
     {
       question: 'What makes your PPC and advertising services effective?',

@@ -1,5 +1,6 @@
 import { BarChart, Target, TrendingUp, Zap, LineChart, PieChart } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function ProductRanking() {
   return (
@@ -9,6 +10,7 @@ export function ProductRanking() {
       subtitle="Rank Higher, Sell More"
       description="Advanced strategies to improve your product rankings on Amazon, Flipkart, and other marketplaces. Get to page 1 and stay there with our proven ranking techniques."
       gradient="from-blue-500 to-blue-600"
+      heroImage={serviceHeroImages['product-ranking']}
       features={[
         {
           title: 'Keyword Research & Mapping',
@@ -87,55 +89,6 @@ export function ProductRanking() {
           step: 4,
           title: 'Monitor & Improve',
           description: 'Track rankings daily, analyze performance, and refine strategies continuously.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹12,999',
-          period: '/month',
-          features: [
-            'Up to 20 products',
-            'Keyword research (50 keywords)',
-            'Basic listing optimization',
-            'Bi-weekly rank tracking',
-            'Monthly performance reports',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹24,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Up to 50 products',
-            'Advanced keyword research (200 keywords)',
-            'Complete listing optimization',
-            'Daily rank tracking',
-            'Competitor monitoring',
-            'Review management',
-            'Weekly performance reports',
-            'PPC integration',
-            'Dedicated ranking specialist'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Unlimited products',
-            'Comprehensive keyword strategy',
-            'Multi-marketplace optimization',
-            'Real-time rank tracking',
-            'Advanced competitor intelligence',
-            'Review generation campaigns',
-            'Custom dashboards',
-            'White-label reports',
-            'Dedicated team',
-            'Strategic consulting'
-          ]
         }
       ]}
       faq={[

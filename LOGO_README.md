@@ -1,8 +1,8 @@
-# 🎨 EcomHub Logo System
+# 🎨 Ceuki India Pvt Ltd Logo System
 
 ## Overview
 
-Modern, professional tech startup logo designed for "EcomHub" - an all-in-one e-commerce business service platform. The design reflects growth, scalability, and professionalism at Shopify/Razorpay/Zoho level.
+Modern, professional tech startup logo designed for "Ceuki India Pvt Ltd" - an all-in-one e-commerce business service platform. The design reflects growth, scalability, and professionalism at Shopify/Razorpay/Zoho level.
 
 ## 🎯 Design Concept
 
@@ -264,7 +264,7 @@ import { Logo, LogoMark } from './components/Logo';
 To change the brand name, update in `/src/app/components/Logo.tsx`:
 
 ```tsx
-// Change "EcomHub" to your brand name
+// Change "Ceuki India Pvt Ltd" to your brand name
 <h1 className={`...`}>
   YourBrandName  {/* Change this */}
 </h1>
@@ -307,7 +307,7 @@ For questions or custom requirements:
 
 ## 📄 License
 
-This logo system is created specifically for the EcomHub brand. All rights reserved.
+This logo system is created specifically for the Ceuki India Pvt Ltd brand. All rights reserved.
 
 ---
 

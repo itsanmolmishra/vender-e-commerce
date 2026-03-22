@@ -277,4 +277,4 @@ The website is now a **complete SaaS platform** ready for:
 - Investor presentations
 - Market launch
 
-🎉 **Your EcomHub platform is now fully functional with investor-ready service depth!**
+🎉 **Your Ceuki India Pvt Ltd platform is now fully functional with investor-ready service depth!**

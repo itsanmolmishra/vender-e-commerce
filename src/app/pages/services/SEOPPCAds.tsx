@@ -1,5 +1,6 @@
 import { TrendingUp, Target, BarChart, Zap, Users, LineChart } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function SEOPPCAds() {
   return (
@@ -7,8 +8,9 @@ export function SEOPPCAds() {
       icon={TrendingUp}
       title="SEO & PPC Advertising"
       subtitle="Drive Traffic & Boost Sales"
-      description="Data-driven SEO and PPC campaigns to increase your product visibility, drive qualified traffic, and maximize ROI across all marketplace platforms."
+      description="Data-driven SEO and PPC campaigns to increase your product visibility, drive qualified traffic, and maximize ROI across all marketplace Partnership."
       gradient="from-green-500 to-green-600"
+      heroImage={serviceHeroImages['seo-ppc-ads']}
       features={[
         {
           title: 'Marketplace SEO',
@@ -87,57 +89,6 @@ export function SEOPPCAds() {
           step: 4,
           title: 'Optimize & Scale',
           description: 'Continuous optimization through data analysis and strategic bid adjustments.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Starter',
-          price: '₹9,999',
-          period: '/month',
-          features: [
-            'Ad spend up to ₹30K/month',
-            '2 marketplace platforms',
-            'Basic keyword research',
-            'Sponsored Products campaigns',
-            'Bi-weekly optimization',
-            'Monthly performance reports',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹19,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Ad spend up to ₹1L/month',
-            'All marketplace platforms',
-            'Advanced keyword research',
-            'Full advertising suite',
-            'A/B testing',
-            'Weekly optimization',
-            'Weekly detailed reports',
-            'ACoS optimization',
-            'Dedicated PPC manager',
-            'Phone & chat support'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Unlimited ad spend management',
-            'Multi-platform campaigns',
-            'Google Shopping integration',
-            'Advanced automation',
-            'Real-time dashboard access',
-            'Daily optimization',
-            'Custom reporting',
-            'Dedicated team',
-            'Strategic consulting',
-            'Priority support'
-          ]
         }
       ]}
       faq={[

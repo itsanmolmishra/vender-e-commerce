@@ -1,5 +1,6 @@
 import { Palette, Award, Zap, TrendingUp, Target, Sparkles } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function BrandCreatives() {
   return (
@@ -7,8 +8,9 @@ export function BrandCreatives() {
       icon={Palette}
       title="Brand Creatives"
       subtitle="Build a Memorable Brand Identity"
-      description="Complete brand identity and creative services to establish a strong, professional brand presence across all platforms."
+      description="Complete brand identity and creative services to establish a strong, professional brand presence across all Partnership."
       gradient="from-pink-500 to-purple-600"
+      heroImage={serviceHeroImages['brand-creatives']}
       features={[
         {
           title: 'Logo Design',
@@ -87,52 +89,6 @@ export function BrandCreatives() {
           step: 4,
           title: 'Brand Rollout',
           description: 'Complete brand assets delivery with implementation support.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Logo Package',
-          price: '₹14,999',
-          period: '/one-time',
-          features: [
-            'Logo design (3 concepts)',
-            'Unlimited revisions',
-            'Color variations',
-            'Source files (AI, PSD)',
-            'Social media kit',
-            'Basic brand guidelines'
-          ]
-        },
-        {
-          name: 'Brand Identity',
-          price: '₹49,999',
-          period: '/one-time',
-          popular: true,
-          features: [
-            'Everything in Logo Package',
-            'Complete brand identity',
-            'Business card design',
-            'Letterhead & envelope',
-            'Packaging design (1 product)',
-            'Store branding template',
-            'Comprehensive brand book',
-            'Launch support'
-          ]
-        },
-        {
-          name: 'Complete Branding',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Brand Identity',
-            'Multi-product packaging',
-            'Marketing collateral suite',
-            'Website design mockups',
-            'Photography art direction',
-            'Brand strategy consulting',
-            'Dedicated brand manager',
-            '6-month support'
-          ]
         }
       ]}
       faq={[

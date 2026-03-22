@@ -1,5 +1,6 @@
 import { Shield, FileCheck, Clock, TrendingUp, Users, Award } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function LegalTrademark() {
   return (
@@ -9,6 +10,7 @@ export function LegalTrademark() {
       subtitle="Protect Your Brand & Business"
       description="Comprehensive legal support and trademark registration services to safeguard your brand identity and intellectual property."
       gradient="from-purple-500 to-indigo-600"
+      heroImage={serviceHeroImages['legal-trademark']}
       features={[
         {
           title: 'Trademark Registration',
@@ -39,7 +41,7 @@ export function LegalTrademark() {
         {
           icon: Shield,
           title: 'Brand Security',
-          description: 'Protect your brand identity and prevent unauthorized use across platforms.'
+          description: 'Protect your brand identity and prevent unauthorized use across Partnership.'
         },
         {
           icon: FileCheck,
@@ -87,52 +89,6 @@ export function LegalTrademark() {
           step: 4,
           title: 'Protection & Monitoring',
           description: 'Ongoing brand monitoring and protection services.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹9,999',
-          period: '/trademark',
-          features: [
-            'Trademark search report',
-            '1 class registration',
-            'Application filing',
-            'Response to objections',
-            'Registration certificate',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹18,999',
-          period: '/trademark',
-          popular: true,
-          features: [
-            'Everything in Basic',
-            'Up to 3 classes',
-            'Brand protection consultation',
-            'Marketplace registration support',
-            'Priority filing',
-            'Expedited processing',
-            'Dedicated IP attorney',
-            '1 year monitoring'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Professional',
-            'Unlimited classes',
-            'International trademark filing',
-            'Complete IP portfolio management',
-            'Anti-counterfeit monitoring',
-            'Legal team on retainer',
-            'Priority support',
-            'Lifetime assistance'
-          ]
         }
       ]}
       faq={[

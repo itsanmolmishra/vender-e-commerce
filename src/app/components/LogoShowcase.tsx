@@ -25,7 +25,7 @@ export function LogoShowcase() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            EcomHub{' '}
+            Ceuki India Pvt Ltd{' '}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
               Brand Identity
             </span>
@@ -285,7 +285,7 @@ export function LogoShowcase() {
               <div className="space-y-4">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Bold (Logo)</p>
-                  <p className="text-4xl font-bold">EcomHub - Grow Your Business</p>
+                  <p className="text-4xl font-bold">Ceuki India Pvt Ltd — Grow Your Business</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Semibold (Headings)</p>

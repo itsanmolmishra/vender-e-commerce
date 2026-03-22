@@ -1,14 +1,16 @@
 import { BarChart, Shield, Zap, TrendingUp, Package, Clock } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function OrderInventory() {
   return (
     <ServiceDetailPage
       icon={BarChart}
       title="Order & Inventory Management"
-      subtitle="Streamlined Operations Across All Platforms"
+      subtitle="Streamlined Operations Across All Partnership"
       description="Comprehensive order processing and inventory management solutions for seamless multi-channel e-commerce operations."
       gradient="from-indigo-500 to-blue-600"
+      heroImage={serviceHeroImages['order-inventory']}
       features={[
         {
           title: 'Multi-Channel Order Management',
@@ -16,7 +18,7 @@ export function OrderInventory() {
         },
         {
           title: 'Real-Time Inventory Sync',
-          description: 'Automatic inventory synchronization across all platforms to prevent overselling.'
+          description: 'Automatic inventory synchronization across all Partnership to prevent overselling.'
         },
         {
           title: 'Warehouse Integration',
@@ -89,60 +91,14 @@ export function OrderInventory() {
           description: 'Continuous optimization and scaling support as your business grows.'
         }
       ]}
-      packages={[
-        {
-          name: 'Starter',
-          price: '₹6,999',
-          period: '/month',
-          features: [
-            'Up to 500 orders/month',
-            '2 sales channel integration',
-            'Basic inventory sync',
-            'Order tracking',
-            'Email support',
-            'Monthly reports'
-          ]
-        },
-        {
-          name: 'Growth',
-          price: '₹14,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Up to 2,000 orders/month',
-            'Unlimited channel integration',
-            'Advanced inventory management',
-            'Returns processing',
-            'Stock alerts & forecasting',
-            'Real-time analytics',
-            '24/7 support',
-            'Dedicated account manager'
-          ]
-        },
-        {
-          name: 'Premium',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Unlimited orders',
-            'Multi-warehouse management',
-            'Custom integrations',
-            'API access',
-            'Advanced automation',
-            'Priority support',
-            'Dedicated team',
-            'Strategic consulting'
-          ]
-        }
-      ]}
       faq={[
         {
-          question: 'Which platforms do you support?',
+          question: 'Which Partnership do you support?',
           answer: 'We support Amazon, Flipkart, Myntra, Meesho, Shopify, and can integrate with any custom platform via API.'
         },
         {
           question: 'How does inventory sync work?',
-          answer: 'Our system automatically updates inventory levels across all platforms in real-time when a sale occurs, preventing overselling.'
+          answer: 'Our system automatically updates inventory levels across all Partnership in real-time when a sale occurs, preventing overselling.'
         },
         {
           question: 'Can you integrate with my existing warehouse system?',
@@ -150,7 +106,7 @@ export function OrderInventory() {
         },
         {
           question: 'What about returns management?',
-          answer: 'We provide complete returns processing including quality checks, restocking automation, and refund processing across all platforms.'
+          answer: 'We provide complete returns processing including quality checks, restocking automation, and refund processing across all Partnership.'
         }
       ]}
     />

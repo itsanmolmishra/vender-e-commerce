@@ -1,5 +1,39 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Link } from 'react-router';
 import { Logo } from './Logo';
+
+const ecommercePartnerLinks = [
+  { label: 'Amazon', to: '/Partnership/amazon' },
+  { label: 'Flipkart', to: '/Partnership/flipkart' },
+  { label: 'Meesho', to: '/Partnership/meesho' },
+  { label: 'Nykaa', to: '/Partnership/nykaa' },
+  { label: 'Myntra', to: '/Partnership/myntra' },
+  { label: 'Walmart', to: '/Partnership/walmart' },
+  { label: 'JioMart', to: '/Partnership/jiomart' },
+  { label: 'Shopify', to: '/Partnership/shopify' },
+  { label: 'GlowRoad', to: '/Partnership/glowroad' },
+];
+
+const quickCommerceLinks = [
+  { label: 'Blinkit', to: '/Partnership/blinkit' },
+  { label: 'Zepto', to: '/Partnership/zepto' },
+];
+
+const socialLinks: { Icon: typeof Facebook; href: string; label: string }[] = [
+  { Icon: Facebook, href: 'https://www.facebook.com', label: 'Facebook' },
+  { Icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  {
+    Icon: Instagram,
+    href: 'https://www.instagram.com/ceuki_india?utm_source=qr&igsh=amhsdTV1ZHFleDlz',
+    label: 'Instagram',
+  },
+  {
+    Icon: Linkedin,
+    href: 'https://www.linkedin.com/in/vikas-kumar-b148293b8',
+    label: 'LinkedIn',
+  },
+  { Icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube' },
+];
 
 export function Footer() {
   return (
@@ -8,17 +42,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-blue-300 to-purple-400 bg-clip-text text-transparent mb-4">
-              EcomHub
+            <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 via-blue-300 to-purple-400 bg-clip-text text-transparent mb-4 leading-tight">
+              Ceuki India Pvt Ltd
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Your trusted partner for launching and scaling e-commerce businesses across all major platforms.
+              Your trusted partner for launching and scaling e-commerce businesses across all major Partnership.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, idx) => (
+              {socialLinks.map(({ Icon, href, label }) => (
                 <a
-                  key={idx}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-110"
                 >
                   <Icon className="w-5 h-5" />
@@ -41,15 +78,26 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Platforms */}
+          {/* Partnership */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Platforms</h3>
-            <ul className="space-y-3">
-              {['Amazon', 'Flipkart', 'Myntra', 'Meesho', 'Shopify'].map((item, idx) => (
-                <li key={idx}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    {item}
-                  </a>
+            <h3 className="font-semibold text-lg mb-4">Partnership</h3>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">E-commerce</p>
+            <ul className="space-y-2 mb-4">
+              {ecommercePartnerLinks.map((item) => (
+                <li key={item.to}>
+                  <Link to={item.to} className="text-gray-400 hover:text-white transition-colors text-sm">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Quick commerce</p>
+            <ul className="space-y-2">
+              {quickCommerceLinks.map((item) => (
+                <li key={item.to}>
+                  <Link to={item.to} className="text-gray-400 hover:text-white transition-colors text-sm">
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -95,7 +143,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2026 EcomHub. All rights reserved.
+              © 2026 Ceuki India Pvt Ltd. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>

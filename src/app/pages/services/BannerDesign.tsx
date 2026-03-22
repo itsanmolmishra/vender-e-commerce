@@ -1,5 +1,6 @@
 import { Palette, Award, Zap, TrendingUp, Target, Users } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function BannerDesign() {
   return (
@@ -9,6 +10,7 @@ export function BannerDesign() {
       subtitle="Eye-Catching Designs That Convert"
       description="Professional banner and promotional design services to boost your marketplace visibility and drive sales."
       gradient="from-orange-500 to-red-600"
+      heroImage={serviceHeroImages['banner-design']}
       features={[
         {
           title: 'Marketplace Banners',
@@ -24,7 +26,7 @@ export function BannerDesign() {
         },
         {
           title: 'Social Media Creatives',
-          description: 'Eye-catching graphics for Instagram, Facebook, and other social platforms.'
+          description: 'Eye-catching graphics for Instagram, Facebook, and other social Partnership.'
         },
         {
           title: 'Ad Banners',
@@ -32,7 +34,7 @@ export function BannerDesign() {
         },
         {
           title: 'Brand Guidelines',
-          description: 'Consistent visual identity across all platforms and marketing materials.'
+          description: 'Consistent visual identity across all Partnership and marketing materials.'
         }
       ]}
       benefits={[
@@ -87,52 +89,6 @@ export function BannerDesign() {
           step: 4,
           title: 'Delivery & Support',
           description: 'Final files in all required formats with ongoing design support.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Starter',
-          price: '₹4,999',
-          period: '/month',
-          features: [
-            '5 banner designs',
-            'Basic A+ content (1 page)',
-            'Social media templates (3)',
-            '2 revisions per design',
-            '48-hour delivery',
-            'Standard formats'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹12,999',
-          period: '/month',
-          popular: true,
-          features: [
-            '15 banner designs',
-            'Premium A+ content (3 pages)',
-            'Social media kit (10 templates)',
-            'Ad banner variations',
-            'Unlimited revisions',
-            '24-hour delivery',
-            'All file formats',
-            'Dedicated designer'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Unlimited designs',
-            'Complete A+ content suite',
-            'Brand guideline creation',
-            'Video graphics',
-            'Animation support',
-            'Priority 12-hour delivery',
-            'Dedicated design team',
-            'Strategic creative direction'
-          ]
         }
       ]}
       faq={[

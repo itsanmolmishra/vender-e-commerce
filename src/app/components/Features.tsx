@@ -27,7 +27,7 @@ export function Features() {
     {
       icon: TrendingUp,
       title: 'Data-Driven Growth',
-      description: 'Advanced analytics and insights to optimize your sales and maximize ROI across all platforms.',
+      description: 'Advanced analytics and insights to optimize your sales and maximize ROI across all Partnership.',
       gradient: 'from-green-500 to-green-600',
       glowColor: 'green-500'
     },
@@ -69,7 +69,7 @@ export function Features() {
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               Why Choose{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                EcomHub
+                Ceuki India Pvt Ltd
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

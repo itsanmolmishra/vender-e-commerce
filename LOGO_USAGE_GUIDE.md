@@ -1,8 +1,8 @@
-# EcomHub Logo & Brand Identity Guide
+# Ceuki India Pvt Ltd Logo & Brand Identity Guide
 
 ## 🎨 Logo Overview
 
-The EcomHub logo is a modern, professional tech startup identity designed to reflect e-commerce growth and business scaling. It combines a shopping cart with an upward arrow and growth graph elements.
+The Ceuki India Pvt Ltd logo is a modern, professional tech startup identity designed to reflect e-commerce growth and business scaling. It combines a shopping cart with an upward arrow and growth graph elements.
 
 ## 📦 Logo Variations
 
@@ -248,7 +248,7 @@ Use white version of logo or theme="dark" variant
 ## 📞 Support
 
 For questions about logo usage or custom requirements:
-- Email: brand@ecomhub.com
+- Email: info@ceukiindia.com
 - Visit: /brand page for interactive showcase
 - Download: Complete brand kit from website
 

@@ -1,8 +1,11 @@
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Headphones } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+import { OFFICE_MAP_EMBED_SRC } from '../data/officeMapEmbed';
 
 export function ContactPage() {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,6 +20,16 @@ export function ContactPage() {
     console.log('Form submitted:', formData);
     // Handle form submission
   };
+
+  useEffect(() => {
+    const state = location.state as { focusContactForm?: boolean } | null;
+    if (state?.focusContactForm) {
+      const t = window.setTimeout(() => {
+        document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+      return () => window.clearTimeout(t);
+    }
+  }, [location]);
 
   const contactInfo = [
     {
@@ -103,10 +116,11 @@ export function ContactPage() {
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Contact Form */}
           <motion.div
+            id="contact-form"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-3xl shadow-xl p-8 md:p-10"
+            className="bg-white rounded-3xl shadow-xl p-8 md:p-10 scroll-mt-28"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -188,7 +202,7 @@ export function ContactPage() {
                   <option value="myntra">Myntra</option>
                   <option value="meesho">Meesho</option>
                   <option value="shopify">Shopify</option>
-                  <option value="multiple">Multiple Platforms</option>
+                  <option value="multiple">Multiple Partnership</option>
                 </select>
               </div>
 
@@ -280,19 +294,23 @@ export function ContactPage() {
           </motion.div>
         </div>
 
-        {/* Map Section (Placeholder) */}
+        {/* Map */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-white rounded-3xl shadow-xl overflow-hidden h-96"
+          className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100"
         >
-          <div className="w-full h-full bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-purple-600 mx-auto mb-4" />
-              <p className="text-xl font-semibold text-gray-900">Interactive Map Coming Soon</p>
-              <p className="text-gray-600 mt-2">Find our offices near you</p>
-            </div>
+          <h2 className="sr-only">Office location map</h2>
+          <div className="relative w-full aspect-[4/3] min-h-[280px] sm:min-h-[360px] lg:min-h-[450px]">
+            <iframe
+              title="Google Maps — office location"
+              src={OFFICE_MAP_EMBED_SRC}
+              className="absolute inset-0 h-full w-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </motion.div>
       </div>

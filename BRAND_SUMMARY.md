@@ -1,8 +1,8 @@
-# 🎨 EcomHub Brand Identity - Complete Summary
+# 🎨 Ceuki India Pvt Ltd Brand Identity - Complete Summary
 
 ## ✨ What Was Created
 
-A **professional, modern tech startup logo and complete brand identity system** for EcomHub, designed to match the quality of industry leaders like Shopify, Razorpay, and Zoho.
+A **professional, modern tech startup logo and complete brand identity system** for Ceuki India Pvt Ltd, designed to match the quality of industry leaders like Shopify, Razorpay, and Zoho.
 
 ---
 
@@ -113,7 +113,7 @@ className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 bg-clip-text 
 ### 1. Full Horizontal Logo
 **Code:** `<Logo variant="full" size="md" />`
 - **Icon:** 32px shopping cart with growth arrow
-- **Text:** "EcomHub" in gradient
+- **Text:** "Ceuki India Pvt Ltd" in gradient
 - **Best for:** Navbar, headers, email signatures
 - **Minimum width:** 120px
 
@@ -373,7 +373,7 @@ You now have a **complete, professional brand identity system** including:
 ✅ **Integrated Components** - Ready to use in React/TypeScript
 ✅ **Professional Quality** - Shopify/Razorpay/Zoho level branding
 
-**The logo is now live on your website and ready for use across all platforms!** 🚀
+**The logo is now live on your website and ready for use across all Partnership!** 🚀
 
 ---
 

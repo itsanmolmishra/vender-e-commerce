@@ -1,5 +1,6 @@
 import { Palette, Shield, Zap, TrendingUp, Users, BarChart } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function MyntraSellerHub() {
   return (
@@ -9,6 +10,7 @@ export function MyntraSellerHub() {
       subtitle="Fashion & Lifestyle E-commerce Excellence"
       description="Complete Myntra marketplace management for fashion and lifestyle brands to maximize visibility and sales."
       gradient="from-pink-500 to-purple-600"
+      heroImage={serviceHeroImages['myntra-seller-hub']}
       features={[
         {
           title: 'Myntra Seller Registration',
@@ -87,53 +89,6 @@ export function MyntraSellerHub() {
           step: 4,
           title: 'Scale & Optimize',
           description: 'Continuous performance optimization and seasonal campaign planning.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Starter',
-          price: '₹12,999',
-          period: '/month',
-          features: [
-            'Myntra seller account setup',
-            'Up to 50 product listings',
-            'Basic catalog optimization',
-            'Order management support',
-            'Monthly performance reports',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Growth',
-          price: '₹24,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Everything in Starter',
-            'Up to 200 product listings',
-            'Myntra Studio integration',
-            'Campaign management',
-            'FBM setup & optimization',
-            'Sale event preparation',
-            'Weekly analytics',
-            '24/7 priority support',
-            'Dedicated account manager'
-          ]
-        },
-        {
-          name: 'Premium',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Growth',
-            'Unlimited listings',
-            'Multi-brand management',
-            'Advanced creative services',
-            'Influencer marketing support',
-            'Premium brand positioning',
-            'Dedicated team',
-            'Strategic consulting'
-          ]
         }
       ]}
       faq={[

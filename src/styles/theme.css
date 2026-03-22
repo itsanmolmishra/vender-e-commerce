@@ -2,20 +2,26 @@
 
 :root {
   --font-size: 16px;
+  /* Ceuki India Pvt Ltd — logo-led theme */
+  --ceuki-blue: #1a4a94;
+  --ceuki-bright: #2e5bff;
+  --ceuki-orange: #f58220;
+  --ceuki-text: #333333;
+  --ceuki-muted: #707070;
   --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
+  --foreground: #333333;
   --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
+  --card-foreground: #333333;
+  --popover: #ffffff;
+  --popover-foreground: #333333;
+  --primary: #1a4a94;
+  --primary-foreground: #ffffff;
+  --secondary: #eef3fb;
+  --secondary-foreground: #1a4a94;
   --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
+  --muted-foreground: #707070;
+  --accent: #fff4e8;
+  --accent-foreground: #1a4a94;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
@@ -24,12 +30,12 @@
   --switch-background: #cbced4;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --ring: #2e5bff;
+  --chart-1: #1a4a94;
+  --chart-2: #2e5bff;
+  --chart-3: #f58220;
+  --chart-4: #5c85c9;
+  --chart-5: #e67410;
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -117,6 +123,219 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Tailwind palette overrides — Ceuki royal blue + accent orange (logo + marketing art) */
+  --color-blue-50: #eef3fb;
+  --color-blue-100: #dce8f7;
+  --color-blue-200: #b9d0ef;
+  --color-blue-300: #8fb0df;
+  --color-blue-400: #5c85c9;
+  --color-blue-500: #2e5bff;
+  --color-blue-600: #1a4a94;
+  --color-blue-700: #153d7a;
+  --color-blue-800: #122f5c;
+  --color-blue-900: #0f2440;
+  --color-blue-950: #0a1628;
+
+  --color-indigo-50: #eef3fb;
+  --color-indigo-100: #dce8f7;
+  --color-indigo-200: #b9d0ef;
+  --color-indigo-300: #8fb0df;
+  --color-indigo-400: #5c85c9;
+  --color-indigo-500: #2e5bff;
+  --color-indigo-600: #1a4a94;
+  --color-indigo-700: #153d7a;
+  --color-indigo-800: #122f5c;
+  --color-indigo-900: #0f2440;
+  --color-indigo-950: #0a1628;
+
+  --color-violet-50: #eef3fb;
+  --color-violet-100: #dce8f7;
+  --color-violet-200: #b9d0ef;
+  --color-violet-300: #8fb0df;
+  --color-violet-400: #5c85c9;
+  --color-violet-500: #2e5bff;
+  --color-violet-600: #1a4a94;
+  --color-violet-700: #153d7a;
+  --color-violet-800: #122f5c;
+  --color-violet-900: #0f2440;
+  --color-violet-950: #0a1628;
+
+  /* Gradients use purple/pink → map to orange accent (logo) */
+  --color-purple-50: #fff7ed;
+  --color-purple-100: #ffedd5;
+  --color-purple-200: #fed7aa;
+  --color-purple-300: #fdba74;
+  --color-purple-400: #fb923c;
+  --color-purple-500: #f58220;
+  --color-purple-600: #e67410;
+  --color-purple-700: #c2610c;
+  --color-purple-800: #9a4f0e;
+  --color-purple-900: #7c3f0f;
+  --color-purple-950: #431a05;
+
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f58220;
+  --color-orange-600: #e67410;
+  --color-orange-700: #c2610c;
+  --color-orange-800: #9a4f0e;
+  --color-orange-900: #7c3f0f;
+  --color-orange-950: #431a05;
+
+  --color-amber-50: #fff7ed;
+  --color-amber-100: #ffedd5;
+  --color-amber-200: #fed7aa;
+  --color-amber-300: #fdba74;
+  --color-amber-400: #fb923c;
+  --color-amber-500: #f58220;
+  --color-amber-600: #e67410;
+  --color-amber-700: #c2610c;
+  --color-amber-800: #9a4f0e;
+  --color-amber-900: #7c3f0f;
+
+  --color-cyan-50: #eef6ff;
+  --color-cyan-100: #d9ecff;
+  --color-cyan-200: #b3d7ff;
+  --color-cyan-300: #7ab8ff;
+  --color-cyan-400: #4d94f7;
+  --color-cyan-500: #2e5bff;
+  --color-cyan-600: #1a4a94;
+  --color-cyan-700: #153d7a;
+  --color-cyan-800: #122f5c;
+  --color-cyan-900: #0f2440;
+  --color-cyan-950: #0a1628;
+
+  --color-sky-50: #eef6ff;
+  --color-sky-100: #d9ecff;
+  --color-sky-200: #b3d7ff;
+  --color-sky-300: #7ab8ff;
+  --color-sky-400: #4d94f7;
+  --color-sky-500: #2e5bff;
+  --color-sky-600: #1a4a94;
+  --color-sky-700: #153d7a;
+  --color-sky-800: #122f5c;
+  --color-sky-900: #0f2440;
+  --color-sky-950: #0a1628;
+
+  /* Body / headings — marketing template greys */
+  --color-gray-500: #707070;
+  --color-gray-600: #5c5c5c;
+  --color-gray-700: #707070;
+  --color-gray-800: #3d3d3d;
+  --color-gray-900: #333333;
+
+  /* "Success" greens → Ceuki blues (green-500 = royal, blue-500 = bright for gradients) */
+  --color-green-50: #eef3fb;
+  --color-green-100: #dce8f7;
+  --color-green-200: #b9d0ef;
+  --color-green-300: #8fb0df;
+  --color-green-400: #5c85c9;
+  --color-green-500: #1a4a94;
+  --color-green-600: #153d7a;
+  --color-green-700: #122f5c;
+  --color-green-800: #0f2440;
+  --color-green-900: #0a1628;
+  --color-green-950: #050d18;
+
+  --color-emerald-50: #eef3fb;
+  --color-emerald-100: #dce8f7;
+  --color-emerald-200: #b9d0ef;
+  --color-emerald-300: #8fb0df;
+  --color-emerald-400: #5c85c9;
+  --color-emerald-500: #1a4a94;
+  --color-emerald-600: #153d7a;
+  --color-emerald-700: #122f5c;
+  --color-emerald-800: #0f2440;
+  --color-emerald-900: #0a1628;
+  --color-emerald-950: #050d18;
+
+  --color-lime-50: #f4f8ff;
+  --color-lime-100: #e3edfb;
+  --color-lime-200: #c8daf5;
+  --color-lime-300: #a3c2ec;
+  --color-lime-400: #7aa6df;
+  --color-lime-500: #4d88d4;
+  --color-lime-600: #1a4a94;
+  --color-lime-700: #153d7a;
+  --color-lime-800: #122f5c;
+  --color-lime-900: #0f2440;
+  --color-lime-950: #0a1628;
+
+  --color-teal-50: #eef6ff;
+  --color-teal-100: #d9ecff;
+  --color-teal-200: #b3d7ff;
+  --color-teal-300: #7ab8ff;
+  --color-teal-400: #4d94f7;
+  --color-teal-500: #2e5bff;
+  --color-teal-600: #1a4a94;
+  --color-teal-700: #153d7a;
+  --color-teal-800: #122f5c;
+  --color-teal-900: #0f2440;
+  --color-teal-950: #0a1628;
+
+  /* Warm accent reds (marketing CTAs) → orange family */
+  --color-red-50: #fff7ed;
+  --color-red-100: #ffedd5;
+  --color-red-200: #fed7aa;
+  --color-red-300: #fdba74;
+  --color-red-400: #fb923c;
+  --color-red-500: #f58220;
+  --color-red-600: #e67410;
+  --color-red-700: #c2610c;
+  --color-red-800: #9a4f0e;
+  --color-red-900: #7c3f0f;
+  --color-red-950: #431a05;
+
+  --color-rose-50: #fff7ed;
+  --color-rose-100: #ffedd5;
+  --color-rose-200: #fed7aa;
+  --color-rose-300: #fdba74;
+  --color-rose-400: #fb923c;
+  --color-rose-500: #f58220;
+  --color-rose-600: #e67410;
+  --color-rose-700: #c2610c;
+  --color-rose-800: #9a4f0e;
+  --color-rose-900: #7c3f0f;
+  --color-rose-950: #431a05;
+
+  /* Pink utilities → bright brand blue (pairs with red/orange for gradients) */
+  --color-pink-50: #eef3fb;
+  --color-pink-100: #dce8f7;
+  --color-pink-200: #b9d0ef;
+  --color-pink-300: #8fb0df;
+  --color-pink-400: #5c85c9;
+  --color-pink-500: #2e5bff;
+  --color-pink-600: #1a4a94;
+  --color-pink-700: #153d7a;
+  --color-pink-800: #122f5c;
+  --color-pink-900: #0f2440;
+  --color-pink-950: #0a1628;
+
+  --color-yellow-50: #fffbeb;
+  --color-yellow-100: #fef3c7;
+  --color-yellow-200: #fde68a;
+  --color-yellow-300: #fcd34d;
+  --color-yellow-400: #fbbf24;
+  --color-yellow-500: #f59e0b;
+  --color-yellow-600: #e67410;
+  --color-yellow-700: #c2610c;
+  --color-yellow-800: #9a4f0e;
+  --color-yellow-900: #7c3f0f;
+
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #5c5c5c;
+  --color-stone-700: #707070;
+  --color-stone-800: #3d3d3d;
+  --color-stone-900: #333333;
 }
 
 @layer base {

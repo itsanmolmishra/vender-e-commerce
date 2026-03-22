@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Palette, TrendingUp, Users, Star, ArrowRight, CheckCircle, BarChart, Shield, Zap, Heart, Award, Sparkles } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
+import { PartnershipFocusSections } from '../../components/PartnershipFocusSections';
 import { useNavigate } from 'react-router';
 
 export function MyntraPlatform() {
@@ -84,53 +85,6 @@ export function MyntraPlatform() {
     { label: "Return Rate", value: "<8%", sublabel: "vs 15% industry avg" }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Boutique",
-      price: "₹12,999",
-      period: "/month",
-      description: "Perfect for emerging fashion brands",
-      features: [
-        "Up to 100 style listings",
-        "Basic fashion photography",
-        "Monthly trend reports",
-        "Email support",
-        "Seasonal sale preparation"
-      ],
-      highlighted: false
-    },
-    {
-      name: "Fashion Brand",
-      price: "₹29,999",
-      period: "/month",
-      description: "For established fashion businesses",
-      features: [
-        "Up to 500 style listings",
-        "Premium product shoots",
-        "Influencer campaign management",
-        "Weekly analytics dashboard",
-        "Dedicated fashion consultant",
-        "Brand page optimization"
-      ],
-      highlighted: true
-    },
-    {
-      name: "Luxury Label",
-      price: "Custom",
-      period: "",
-      description: "For premium & luxury fashion brands",
-      features: [
-        "Unlimited style catalog",
-        "Exclusive fashion shoots",
-        "VIP customer targeting",
-        "Real-time trend monitoring",
-        "24/7 brand management team",
-        "Custom integrations & API"
-      ],
-      highlighted: false
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-white">
       <Navbar />
@@ -181,6 +135,8 @@ export function MyntraPlatform() {
           </motion.div>
         </div>
       </section>
+
+      <PartnershipFocusSections brandName="Myntra" />
 
       {/* Success Metrics */}
       <section className="py-12 px-4 bg-white/50 backdrop-blur-sm">
@@ -297,88 +253,6 @@ export function MyntraPlatform() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Myntra Management Packages
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the right plan for your fashion brand journey
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative p-8 rounded-3xl shadow-xl transition-all hover:scale-105 ${
-                  plan.highlighted
-                    ? 'bg-gradient-to-br from-pink-500 to-purple-600 text-white'
-                    : 'bg-white border-2 border-gray-200'
-                }`}
-              >
-                {plan.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-yellow-400 text-gray-900 rounded-full font-bold text-sm shadow-lg">
-                    Most Popular
-                  </div>
-                )}
-                
-                <h3 className={`text-2xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
-                  {plan.name}
-                </h3>
-                <p className={`mb-6 ${plan.highlighted ? 'text-white/90' : 'text-gray-600'}`}>
-                  {plan.description}
-                </p>
-                
-                <div className="mb-6">
-                  <span className={`text-5xl font-bold ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
-                    {plan.price}
-                  </span>
-                  <span className={`text-lg ${plan.highlighted ? 'text-white/90' : 'text-gray-600'}`}>
-                    {plan.period}
-                  </span>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        plan.highlighted ? 'text-white' : 'text-green-500'
-                      }`} />
-                      <span className={plan.highlighted ? 'text-white' : 'text-gray-700'}>
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  onClick={() => navigate('/')}
-                  className={`w-full py-3 rounded-full font-semibold transition-all ${
-                    plan.highlighted
-                      ? 'bg-white text-pink-600 hover:bg-gray-100'
-                      : 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:shadow-xl'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -405,7 +279,7 @@ export function MyntraPlatform() {
                 onClick={() => navigate('/')}
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-pink-600 transition-all"
               >
-                Explore All Platforms
+                Explore All Partnership
               </button>
             </div>
           </motion.div>

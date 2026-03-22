@@ -1,0 +1,14 @@
+<!-- AJIO wordmark style (official assets not on Commons); uses system bold sans for retail look -->
+<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48">
+  <title>Ajio</title>
+  <text
+    x="100"
+    y="36"
+    text-anchor="middle"
+    font-family="Arial Black, Helvetica Neue, Helvetica, Arial, sans-serif"
+    font-size="32"
+    font-weight="900"
+    fill="#b71c1c"
+    letter-spacing="-0.06em"
+  >AJIO</text>
+</svg>

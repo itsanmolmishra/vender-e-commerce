@@ -1,5 +1,6 @@
 import { Package, Shield, Zap, TrendingUp, Users, BarChart } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function FlipkartManagement() {
   return (
@@ -9,6 +10,7 @@ export function FlipkartManagement() {
       subtitle="End-to-End Flipkart Seller Solutions"
       description="Comprehensive Flipkart marketplace management to maximize your reach and sales in India's leading e-commerce platform."
       gradient="from-blue-500 to-blue-600"
+      heroImage={serviceHeroImages['flipkart-management']}
       features={[
         {
           title: 'Flipkart Account Registration',
@@ -87,53 +89,6 @@ export function FlipkartManagement() {
           step: 4,
           title: 'Scale & Optimize',
           description: 'Continuous improvement through data analysis and performance optimization.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Starter',
-          price: '₹8,999',
-          period: '/month',
-          features: [
-            'Flipkart account setup',
-            'Up to 30 product listings',
-            'Basic catalog optimization',
-            'Order processing support',
-            'Monthly reports',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Growth',
-          price: '₹19,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Everything in Starter',
-            'Up to 150 product listings',
-            'Advanced listing optimization',
-            'Flipkart PLA management',
-            'FBF integration & management',
-            'Big Billion Days preparation',
-            'Weekly performance analytics',
-            '24/7 priority support',
-            'Dedicated account manager'
-          ]
-        },
-        {
-          name: 'Premium',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Growth',
-            'Unlimited listings',
-            'Full advertising suite',
-            'Multi-category expansion',
-            'Flipkart Plus listing support',
-            'Advanced analytics dashboard',
-            'Dedicated team',
-            'Strategic business consulting'
-          ]
         }
       ]}
       faq={[

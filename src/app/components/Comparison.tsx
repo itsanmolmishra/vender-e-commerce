@@ -31,7 +31,7 @@ export function Comparison() {
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Why Choose{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                EcomHub
+                Ceuki India Pvt Ltd
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -60,8 +60,8 @@ export function Comparison() {
               <div className="text-xs text-gray-500">Other Services</div>
             </div>
             <div className="text-center">
-              <div className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">
-                EcomHub
+              <div className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1 text-sm sm:text-base leading-tight whitespace-normal px-1">
+                Ceuki India Pvt Ltd
               </div>
               <div className="text-xs text-gray-500">Full Service</div>
             </div>
@@ -109,7 +109,7 @@ export function Comparison() {
           {/* Table Footer CTA */}
           <div className="p-6 bg-gradient-to-r from-blue-50 to-purple-50 border-t border-gray-200">
             <div className="text-center">
-              <p className="text-gray-700 mb-4">Ready to experience the EcomHub difference?</p>
+              <p className="text-gray-700 mb-4">Ready to experience the Ceuki India Pvt Ltd difference?</p>
               <button className="px-8 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 text-white rounded-full hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
                 Get Started Today
               </button>

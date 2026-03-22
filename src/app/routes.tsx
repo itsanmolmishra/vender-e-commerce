@@ -4,18 +4,23 @@ import { LogoShowcase } from './components/LogoShowcase';
 import { Layout } from './components/Layout';
 
 // Main Pages
-import { PricingPage } from './pages/PricingPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { CareerPage } from './pages/CareerPage';
 import { EventsPage } from './pages/EventsPage';
 
-// Platform Pages
+// Platform Pages (files live in pages/platforms/)
 import { AmazonPlatform } from './pages/platforms/AmazonPlatform';
 import { FlipkartPlatform } from './pages/platforms/FlipkartPlatform';
 import { MyntraPlatform } from './pages/platforms/MyntraPlatform';
 import { MeeshoPlatform } from './pages/platforms/MeeshoPlatform';
 import { ShopifyPlatform } from './pages/platforms/ShopifyPlatform';
+import { NykaaPlatform } from './pages/platforms/NykaaPlatform';
+import { WalmartPlatform } from './pages/platforms/WalmartPlatform';
+import { JioMartPlatform } from './pages/platforms/JioMartPlatform';
+import { GlowRoadPlatform } from './pages/platforms/GlowRoadPlatform';
+import { BlinkitPlatform } from './pages/platforms/BlinkitPlatform';
+import { ZeptoPlatform } from './pages/platforms/ZeptoPlatform';
 
 // Account Management Services
 import { AmazonSellerCentral } from './pages/services/AmazonSellerCentral';
@@ -40,6 +45,7 @@ import { ProductPhotography } from './pages/services/ProductPhotography';
 import { BannerDesign } from './pages/services/BannerDesign';
 import { BrandCreatives } from './pages/services/BrandCreatives';
 import { VideoProduction } from './pages/services/VideoProduction';
+import { ClientBrandPage } from './pages/clients/ClientBrandPage';
 
 export const router = createBrowserRouter([
   {
@@ -56,10 +62,6 @@ export const router = createBrowserRouter([
       },
       // Main Pages
       {
-        path: 'pricing',
-        Component: PricingPage,
-      },
-      {
         path: 'about',
         Component: AboutPage,
       },
@@ -75,26 +77,55 @@ export const router = createBrowserRouter([
         path: 'events',
         Component: EventsPage,
       },
+      // Client brand pages
+      {
+        path: 'clients/:slug',
+        Component: ClientBrandPage,
+      },
       // Platform Pages
       {
-        path: 'platforms/amazon',
+        path: 'Partnership/amazon',
         Component: AmazonPlatform,
       },
       {
-        path: 'platforms/flipkart',
+        path: 'Partnership/flipkart',
         Component: FlipkartPlatform,
       },
       {
-        path: 'platforms/myntra',
+        path: 'Partnership/myntra',
         Component: MyntraPlatform,
       },
       {
-        path: 'platforms/meesho',
+        path: 'Partnership/meesho',
         Component: MeeshoPlatform,
       },
       {
-        path: 'platforms/shopify',
+        path: 'Partnership/shopify',
         Component: ShopifyPlatform,
+      },
+      {
+        path: 'Partnership/nykaa',
+        Component: NykaaPlatform,
+      },
+      {
+        path: 'Partnership/walmart',
+        Component: WalmartPlatform,
+      },
+      {
+        path: 'Partnership/jiomart',
+        Component: JioMartPlatform,
+      },
+      {
+        path: 'Partnership/glowroad',
+        Component: GlowRoadPlatform,
+      },
+      {
+        path: 'Partnership/blinkit',
+        Component: BlinkitPlatform,
+      },
+      {
+        path: 'Partnership/zepto',
+        Component: ZeptoPlatform,
       },
       // Account Management
       {

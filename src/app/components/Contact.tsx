@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, ExternalLink } from 'lucide-react';
 import { motion } from 'motion/react';
+import { OFFICE_MAP_EMBED_SRC } from '../data/officeMapEmbed';
 
 export function Contact() {
   return (
@@ -151,12 +152,29 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Map placeholder */}
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl h-64 flex items-center justify-center shadow-lg overflow-hidden">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
-                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                <p className="text-gray-700 font-medium">View on Map</p>
+            {/* Map */}
+            <div className="rounded-3xl shadow-lg overflow-hidden border border-gray-100 bg-white">
+              <h3 className="sr-only">Office location map</h3>
+              <div className="relative w-full aspect-[4/3] min-h-[220px] sm:min-h-[260px]">
+                <iframe
+                  title="Google Maps — office location"
+                  src={OFFICE_MAP_EMBED_SRC}
+                  className="absolute inset-0 h-full w-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
+              <a
+                href="https://www.google.com/maps?q=28.57864832,77.31227817"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-blue-600 bg-gray-50 hover:bg-blue-50 border-t border-gray-100 transition-colors"
+              >
+                <MapPin className="w-4 h-4 shrink-0" aria-hidden />
+                View on Map
+                <ExternalLink className="w-3.5 h-3.5 shrink-0 opacity-70" aria-hidden />
+              </a>
             </div>
           </motion.div>
         </div>

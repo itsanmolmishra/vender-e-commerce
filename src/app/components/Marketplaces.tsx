@@ -3,11 +3,11 @@ import { motion } from 'motion/react';
 
 export function Marketplaces() {
   const marketplaces = [
-    { name: 'Amazon', color: 'from-orange-500 to-yellow-500' },
-    { name: 'Flipkart', color: 'from-blue-600 to-blue-400' },
-    { name: 'Myntra', color: 'from-pink-600 to-pink-400' },
-    { name: 'Meesho', color: 'from-purple-600 to-purple-400' },
-    { name: 'Shopify', color: 'from-green-600 to-green-400' }
+    { name: 'Amazon', logoSrc: '/partners/amazon.svg', color: 'from-orange-500 to-yellow-500' },
+    { name: 'Flipkart', logoSrc: '/partners/flipkart.svg', color: 'from-blue-600 to-blue-400' },
+    { name: 'Myntra', logoSrc: '/partners/myntra.png', color: 'from-pink-600 to-pink-400' },
+    { name: 'Meesho', logoSrc: '/partners/meesho.png', color: 'from-purple-600 to-purple-400' },
+    { name: 'Shopify', logoSrc: '/partners/shopify.svg', color: 'from-green-600 to-green-400' }
   ];
 
   const features = [
@@ -54,9 +54,15 @@ export function Marketplaces() {
               {/* Gradient background on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${marketplace.color} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity`} />
 
-              {/* Logo placeholder with gradient */}
-              <div className={`w-16 h-16 bg-gradient-to-br ${marketplace.color} rounded-2xl mb-6 flex items-center justify-center shadow-lg`}>
-                <span className="text-white font-bold text-xl">{marketplace.name[0]}</span>
+              {/* Brand logo (same assets as Trusted Partners / nav) */}
+              <div className="w-16 h-16 rounded-2xl mb-6 flex items-center justify-center shadow-md bg-white border border-gray-100 p-2 group-hover:shadow-lg transition-shadow">
+                <img
+                  src={marketplace.logoSrc}
+                  alt=""
+                  className="max-h-11 w-auto max-w-full object-contain object-center"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
               {/* Name */}

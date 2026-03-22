@@ -1,5 +1,6 @@
 import { Palette, Video, Award, Zap, TrendingUp, Target } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function VideoProduction() {
   return (
@@ -9,6 +10,7 @@ export function VideoProduction() {
       subtitle="Engage Customers with Professional Videos"
       description="High-quality video production services for product demos, brand stories, and marketing campaigns that drive conversions."
       gradient="from-red-500 to-pink-600"
+      heroImage={serviceHeroImages['video-production']}
       features={[
         {
           title: 'Product Demo Videos',
@@ -87,54 +89,6 @@ export function VideoProduction() {
           step: 4,
           title: 'Editing & Delivery',
           description: 'Post-production, editing, and delivery in all required formats.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹9,999',
-          period: '/video',
-          features: [
-            '1 product video (30-60 sec)',
-            'Basic editing',
-            'Background music',
-            'Text overlays',
-            '2 revisions',
-            'HD quality (1080p)',
-            'Standard delivery (10 days)'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹24,999',
-          period: '/video',
-          popular: true,
-          features: [
-            '1 product video (60-90 sec)',
-            'Professional editing',
-            'Voice-over included',
-            'Motion graphics',
-            'Multiple formats',
-            '4K quality option',
-            'Unlimited revisions',
-            'Fast delivery (7 days)',
-            'Social media cuts'
-          ]
-        },
-        {
-          name: 'Premium',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Multiple videos',
-            'Brand story videos',
-            'On-location shoots',
-            'Professional actors',
-            'Advanced VFX',
-            'Complete video campaign',
-            'Dedicated production team',
-            'Priority delivery (5 days)'
-          ]
         }
       ]}
       faq={[

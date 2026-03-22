@@ -25,7 +25,7 @@ export function Benefits() {
     },
     {
       title: 'Scale Without Limits',
-      description: 'Expand to new platforms and categories seamlessly as your business grows.'
+      description: 'Expand to new Partnership and categories seamlessly as your business grows.'
     }
   ];
 

@@ -1,11 +1,7 @@
-import { Briefcase, MapPin, Clock, TrendingUp, Users, Heart, Award, Zap, Search } from 'lucide-react';
+import { TrendingUp, Users, Heart, Award, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useState } from 'react';
 
 export function CareerPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -43,91 +39,6 @@ export function CareerPage() {
     'Gym Membership',
     'Mental Health Support'
   ];
-
-  const openings = [
-    {
-      title: 'Senior Full Stack Developer',
-      department: 'Engineering',
-      location: 'Mumbai / Remote',
-      type: 'Full-time',
-      experience: '4-6 years',
-      description: 'Build scalable solutions for our multi-platform integration system'
-    },
-    {
-      title: 'Product Manager',
-      department: 'Product',
-      location: 'Bangalore',
-      type: 'Full-time',
-      experience: '3-5 years',
-      description: 'Drive product strategy and execution for our seller tools'
-    },
-    {
-      title: 'Senior UI/UX Designer',
-      department: 'Design',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '3-5 years',
-      description: 'Create beautiful, intuitive experiences for our platform'
-    },
-    {
-      title: 'Account Manager',
-      department: 'Sales',
-      location: 'Delhi',
-      type: 'Full-time',
-      experience: '2-4 years',
-      description: 'Help sellers succeed by providing expert guidance and support'
-    },
-    {
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Mumbai / Remote',
-      type: 'Full-time',
-      experience: '3-5 years',
-      description: 'Build and maintain our cloud infrastructure'
-    },
-    {
-      title: 'Content Marketing Specialist',
-      department: 'Marketing',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '2-4 years',
-      description: 'Create compelling content that drives engagement and growth'
-    },
-    {
-      title: 'Data Analyst',
-      department: 'Analytics',
-      location: 'Bangalore',
-      type: 'Full-time',
-      experience: '2-3 years',
-      description: 'Transform data into actionable insights for our sellers'
-    },
-    {
-      title: 'Customer Success Manager',
-      department: 'Support',
-      location: 'Mumbai',
-      type: 'Full-time',
-      experience: '1-3 years',
-      description: 'Ensure seller satisfaction and drive retention'
-    }
-  ];
-
-  const departments = [
-    'all',
-    'Engineering',
-    'Product',
-    'Design',
-    'Sales',
-    'Marketing',
-    'Analytics',
-    'Support'
-  ];
-
-  const filteredOpenings = openings.filter(job => {
-    const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         job.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
-    return matchesSearch && matchesDepartment;
-  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-32 pb-20">
@@ -189,112 +100,6 @@ export function CareerPage() {
               </div>
             ))}
           </div>
-        </motion.div>
-
-        {/* Open Positions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Open Positions</h2>
-          <p className="text-gray-600 text-center mb-8">
-            {filteredOpenings.length} {filteredOpenings.length === 1 ? 'position' : 'positions'} available
-          </p>
-
-          {/* Search & Filter */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search positions..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
-                />
-              </div>
-              <div>
-                <select
-                  value={selectedDepartment}
-                  onChange={(e) => setSelectedDepartment(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
-                >
-                  {departments.map(dept => (
-                    <option key={dept} value={dept}>
-                      {dept === 'all' ? 'All Departments' : dept}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Job Listings */}
-          <div className="space-y-4">
-            {filteredOpenings.map((job, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Briefcase className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                          {job.title}
-                        </h3>
-                        <p className="text-gray-600 mb-3">{job.description}</p>
-                        <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-                          <div className="flex items-center gap-1">
-                            <Briefcase className="w-4 h-4" />
-                            <span>{job.department}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <MapPin className="w-4 h-4" />
-                            <span>{job.location}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            <span>{job.type}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Award className="w-4 h-4" />
-                            <span>{job.experience}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all whitespace-nowrap">
-                    Apply Now
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {filteredOpenings.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-600 text-lg">No positions found matching your criteria.</p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedDepartment('all');
-                }}
-                className="mt-4 text-purple-600 hover:text-purple-700 font-semibold"
-              >
-                Clear filters
-              </button>
-            </div>
-          )}
         </motion.div>
 
         {/* CTA Section */}

@@ -59,7 +59,7 @@ export function Services() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to launch, manage, and scale your online business across multiple platforms
+              Everything you need to launch, manage, and scale your online business across multiple Partnership
             </p>
           </motion.div>
         </div>

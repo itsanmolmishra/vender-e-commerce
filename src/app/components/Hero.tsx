@@ -121,7 +121,7 @@ export function Hero() {
                 <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">
                   7+
                 </div>
-                <div className="text-sm text-gray-600 mt-2 font-medium">Platforms</div>
+                <div className="text-sm text-gray-600 mt-2 font-medium">Patnership</div>
               </div>
               <div className="group cursor-default">
                 <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">

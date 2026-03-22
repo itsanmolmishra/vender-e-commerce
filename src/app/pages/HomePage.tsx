@@ -1,6 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { ClientLogos } from '../components/ClientLogos';
+import { OurClients } from '../components/OurClients';
 import { TrustBadges } from '../components/TrustBadges';
 import { Marketplaces } from '../components/Marketplaces';
 import { Features } from '../components/Features';
@@ -11,11 +12,9 @@ import { Comparison } from '../components/Comparison';
 import { Benefits } from '../components/Benefits';
 import { CaseStudies } from '../components/CaseStudies';
 import { Stats } from '../components/Stats';
-import { Pricing } from '../components/Pricing';
 import { Testimonials } from '../components/Testimonials';
 import { Blog } from '../components/Blog';
 import { FAQ } from '../components/FAQ';
-import { BrandKit } from '../components/BrandKit';
 import { CTA } from '../components/CTA';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
@@ -30,8 +29,9 @@ export function HomePage() {
           <Hero />
         </div>
         <ClientLogos />
+        <OurClients />
         <TrustBadges />
-        <div id="platforms">
+        <div id="Partnership" className="scroll-mt-24">
           <Marketplaces />
         </div>
         <Features />
@@ -44,13 +44,9 @@ export function HomePage() {
         <Benefits />
         <CaseStudies />
         <Stats />
-        <div id="pricing">
-          <Pricing />
-        </div>
         <Testimonials />
         <Blog />
         <FAQ />
-        <BrandKit />
         <CTA />
         <div id="contact">
           <Contact />

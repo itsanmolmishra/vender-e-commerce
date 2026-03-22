@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <!-- Dashboard monitor -->
+  <rect x="3" y="6" width="26" height="18" rx="2" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+  <rect x="5" y="8" width="22" height="3" rx="0.75" fill="#6366F1"/>
+  <!-- Colorful bars -->
+  <rect x="7" y="13" width="4" height="8" rx="0.5" fill="#2563EB"/>
+  <rect x="13" y="11" width="4" height="10" rx="0.5" fill="#7C3AED"/>
+  <rect x="19" y="14" width="4" height="7" rx="0.5" fill="#059669"/>
+  <rect x="25" y="10" width="4" height="11" rx="0.5" fill="#D97706"/>
+  <!-- Trend line -->
+  <path d="M6 22c3-2 6-1 9 3 3-4 7-5 11-2" stroke="#EC4899" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="24" cy="20" r="2" fill="#F59E0B"/>
+  <!-- Stand -->
+  <path d="M12 26h8v2H12z" fill="#94A3B8"/>
+</svg>

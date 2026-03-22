@@ -1,5 +1,6 @@
 import { Clock, Shield, FileCheck, TrendingUp, Users, Award } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function ComplianceSupport() {
   return (
@@ -9,6 +10,7 @@ export function ComplianceSupport() {
       subtitle="Stay Compliant, Sell Confidently"
       description="Expert compliance management to ensure your e-commerce business meets all regulatory requirements and marketplace policies."
       gradient="from-blue-500 to-cyan-600"
+      heroImage={serviceHeroImages['compliance-support']}
       features={[
         {
           title: 'Marketplace Compliance',
@@ -87,52 +89,6 @@ export function ComplianceSupport() {
           step: 4,
           title: 'Ongoing Monitoring',
           description: 'Continuous monitoring and updates for regulatory changes.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹7,999',
-          period: '/month',
-          features: [
-            'GST compliance support',
-            'Marketplace policy guidance',
-            'Monthly compliance review',
-            'Documentation assistance',
-            'Email support',
-            'Compliance alerts'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹15,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Everything in Basic',
-            'Multi-platform compliance',
-            'Product certification support',
-            'Legal documentation',
-            'Quarterly compliance audits',
-            'Priority issue resolution',
-            'Dedicated compliance manager',
-            '24/7 support'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Professional',
-            'International compliance',
-            'Custom compliance framework',
-            'Legal team on retainer',
-            'Monthly audits',
-            'Risk management',
-            'Dedicated team',
-            'Strategic consulting'
-          ]
         }
       ]}
       faq={[

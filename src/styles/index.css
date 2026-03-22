@@ -11,6 +11,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #333333;
 }
 
 /* Glassmorphism utilities */
@@ -31,15 +32,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #1a4a94, #f58220);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+  background: linear-gradient(to bottom, #153d7a, #e67410);
 }
 
 /* Smooth transitions */
 a, button {
   transition: all 0.3s ease;
+}
+
+::selection {
+  background: rgba(245, 130, 32, 0.35);
+  color: #1a1a1a;
 }

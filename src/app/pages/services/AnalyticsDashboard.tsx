@@ -1,5 +1,6 @@
 import { BarChart, TrendingUp, PieChart, Activity, Target, Zap } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function AnalyticsDashboard() {
   return (
@@ -9,6 +10,7 @@ export function AnalyticsDashboard() {
       subtitle="Real-Time Insights for Smarter Decisions"
       description="Comprehensive analytics platform to track, analyze, and optimize your e-commerce business performance across all channels."
       gradient="from-cyan-500 to-blue-600"
+      heroImage={serviceHeroImages['analytics-dashboard']}
       features={[
         {
           title: 'Unified Dashboard',
@@ -44,7 +46,7 @@ export function AnalyticsDashboard() {
         {
           icon: Zap,
           title: 'Real-Time Updates',
-          description: 'Live data synchronization across all platforms every 15 minutes.'
+          description: 'Live data synchronization across all Partnership every 15 minutes.'
         },
         {
           icon: Target,
@@ -89,55 +91,9 @@ export function AnalyticsDashboard() {
           description: 'Regular insights sessions and dashboard refinements.'
         }
       ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹4,999',
-          period: '/month',
-          features: [
-            'Up to 2 platform integration',
-            'Standard dashboard',
-            'Sales & inventory reports',
-            'Monthly data refresh',
-            'Basic visualizations',
-            'Email support'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹12,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Unlimited platform integration',
-            'Custom dashboards',
-            'Real-time data sync',
-            'Advanced analytics',
-            'Automated insights',
-            'Export & API access',
-            'Weekly strategy calls',
-            '24/7 support'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Professional',
-            'AI-powered predictions',
-            'Custom integrations',
-            'White-label dashboard',
-            'Dedicated BI analyst',
-            'Advanced forecasting',
-            'Priority support',
-            'Strategic consulting'
-          ]
-        }
-      ]}
       faq={[
         {
-          question: 'Which platforms can you integrate?',
+          question: 'Which Partnership can you integrate?',
           answer: 'We integrate with Amazon, Flipkart, Myntra, Meesho, Shopify, and can connect to any platform with API access or data export capabilities.'
         },
         {

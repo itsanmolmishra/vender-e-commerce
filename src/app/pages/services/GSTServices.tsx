@@ -1,5 +1,6 @@
 import { FileText, Shield, Zap, TrendingUp, Users, CheckCircle } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function GSTServices() {
   return (
@@ -9,6 +10,7 @@ export function GSTServices() {
       subtitle="Complete GST Solutions for Your Business"
       description="Fast GST registration, monthly/quarterly return filing, compliance management, and expert consultation. Get GST registered in 3-5 days."
       gradient="from-indigo-500 to-indigo-600"
+      heroImage={serviceHeroImages['gst-services']}
       features={[
         {
           title: 'GST Registration',
@@ -87,53 +89,6 @@ export function GSTServices() {
           step: 4,
           title: 'GSTIN Issued',
           description: 'Receive your GST registration certificate and login credentials.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'GST Registration',
-          price: '₹1,999',
-          period: '',
-          features: [
-            'GST registration for one state',
-            'Document preparation',
-            'Online application filing',
-            'ARN tracking',
-            'GSTIN certificate',
-            'GST portal login setup',
-            '7-day processing'
-          ]
-        },
-        {
-          name: 'Monthly Filing',
-          price: '₹1,499',
-          period: '/month',
-          popular: true,
-          features: [
-            'GSTR-1 filing',
-            'GSTR-3B filing',
-            'ITC reconciliation',
-            'Invoice verification',
-            'Tax payment support',
-            'Compliance reminders',
-            'Dedicated CA support',
-            'GST portal management'
-          ]
-        },
-        {
-          name: 'Complete Package',
-          price: '₹15,999',
-          period: '/year',
-          features: [
-            'All monthly filings (12 months)',
-            'Annual return (GSTR-9)',
-            'GST audit support',
-            'ITC optimization',
-            'Notice handling',
-            'Unlimited consultations',
-            'Priority support',
-            '20% cost savings'
-          ]
         }
       ]}
       faq={[

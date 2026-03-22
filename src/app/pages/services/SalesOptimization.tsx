@@ -1,5 +1,6 @@
 import { Zap, TrendingUp, BarChart, Target, Award, DollarSign } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function SalesOptimization() {
   return (
@@ -7,8 +8,9 @@ export function SalesOptimization() {
       icon={Zap}
       title="Sales Optimization"
       subtitle="Maximize Revenue & Conversion Rates"
-      description="Data-driven sales optimization strategies to boost your e-commerce revenue and improve conversion rates across all platforms."
+      description="Data-driven sales optimization strategies to boost your e-commerce revenue and improve conversion rates across all Partnership."
       gradient="from-green-500 to-emerald-600"
+      heroImage={serviceHeroImages['sales-optimization']}
       features={[
         {
           title: 'Conversion Rate Optimization',
@@ -87,53 +89,6 @@ export function SalesOptimization() {
           step: 4,
           title: 'Monitor & Refine',
           description: 'Continuous testing, monitoring, and refinement for maximum results.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Starter',
-          price: '₹11,999',
-          period: '/month',
-          features: [
-            'Conversion rate analysis',
-            'Listing optimization (up to 30 SKUs)',
-            'Basic pricing strategy',
-            'Monthly performance reports',
-            'Email support',
-            'A/B testing (2 tests/month)'
-          ]
-        },
-        {
-          name: 'Growth',
-          price: '₹22,999',
-          period: '/month',
-          popular: true,
-          features: [
-            'Everything in Starter',
-            'Up to 100 SKUs optimization',
-            'Dynamic pricing automation',
-            'Product bundling strategy',
-            'Weekly analytics',
-            'Advanced A/B testing',
-            'Promotional campaign planning',
-            '24/7 support',
-            'Dedicated optimizer'
-          ]
-        },
-        {
-          name: 'Premium',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Everything in Growth',
-            'Unlimited SKUs',
-            'AI-powered optimization',
-            'Multi-platform strategy',
-            'Custom analytics dashboard',
-            'Competitor intelligence',
-            'Dedicated team',
-            'Strategic consulting'
-          ]
         }
       ]}
       faq={[

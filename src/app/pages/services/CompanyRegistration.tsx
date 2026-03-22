@@ -1,5 +1,6 @@
 import { FileCheck, Shield, Zap, TrendingUp, Users, CheckCircle } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function CompanyRegistration() {
   return (
@@ -9,6 +10,7 @@ export function CompanyRegistration() {
       subtitle="Fast & Hassle-Free Business Registration"
       description="Complete company registration services for Private Limited, LLP, One Person Company, and Sole Proprietorship. Get your business legally registered in 7-10 days."
       gradient="from-purple-500 to-purple-600"
+      heroImage={serviceHeroImages['company-registration']}
       features={[
         {
           title: 'Digital Signature Certificate (DSC)',
@@ -87,53 +89,6 @@ export function CompanyRegistration() {
           step: 4,
           title: 'Incorporation',
           description: 'Receive Certificate of Incorporation and PAN/TAN within 7-10 days.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Sole Proprietorship',
-          price: '₹4,999',
-          period: '',
-          features: [
-            'Business name registration',
-            'GST registration',
-            'Shop & Establishment Act',
-            'MSME/Udyam registration',
-            'Bank account opening support',
-            'Digital documentation'
-          ]
-        },
-        {
-          name: 'Private Limited Company',
-          price: '₹14,999',
-          period: '',
-          popular: true,
-          features: [
-            '2 DSC (Digital Signatures)',
-            '2 DIN applications',
-            'Name approval (RUN)',
-            'MOA & AOA drafting',
-            'PAN & TAN application',
-            'Certificate of Incorporation',
-            'Share certificates',
-            'First year compliance free',
-            'Current account opening support'
-          ]
-        },
-        {
-          name: 'LLP Registration',
-          price: '₹11,999',
-          period: '',
-          features: [
-            '2 DSC for designated partners',
-            '2 DPIN applications',
-            'Name approval',
-            'LLP Agreement drafting',
-            'PAN & TAN',
-            'Certificate of Incorporation',
-            'Compliance support',
-            'Bank account assistance'
-          ]
         }
       ]}
       faq={[

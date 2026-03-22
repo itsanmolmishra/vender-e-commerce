@@ -1,5 +1,6 @@
 import { Camera, Image, Sparkles, Zap, Users, TrendingUp } from 'lucide-react';
 import { ServiceDetailPage } from '../ServiceDetailPage';
+import { serviceHeroImages } from '../../data/serviceHeroImages';
 
 export function ProductPhotography() {
   return (
@@ -9,6 +10,7 @@ export function ProductPhotography() {
       subtitle="Professional E-commerce Photography"
       description="High-quality product photography that drives conversions. Studio-grade images, 360° views, lifestyle shoots, and A+ content visuals for all marketplaces."
       gradient="from-pink-500 to-pink-600"
+      heroImage={serviceHeroImages['product-photography']}
       features={[
         {
           title: 'White Background Shoots',
@@ -64,7 +66,7 @@ export function ProductPhotography() {
         {
           icon: Image,
           title: 'Marketplace Ready',
-          description: 'Images delivered in correct dimensions and file sizes for all platforms.'
+          description: 'Images delivered in correct dimensions and file sizes for all Partnership.'
         }
       ]}
       process={[
@@ -87,54 +89,6 @@ export function ProductPhotography() {
           step: 4,
           title: 'Delivery & Upload',
           description: 'Receive images via secure download and we can upload to your listings.'
-        }
-      ]}
-      packages={[
-        {
-          name: 'Basic',
-          price: '₹499',
-          period: '/product',
-          features: [
-            '5 images per product',
-            'White background only',
-            'Basic retouching',
-            '48-hour delivery',
-            'Marketplace-ready format',
-            'Original files included'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '₹999',
-          period: '/product',
-          popular: true,
-          features: [
-            '8 images per product',
-            'White + lifestyle backgrounds',
-            'Advanced retouching',
-            '24-hour delivery',
-            '360° product view',
-            'Infographic images',
-            'A+ content visuals',
-            'Multiple file formats',
-            'Unlimited revisions'
-          ]
-        },
-        {
-          name: 'Premium',
-          price: 'Custom',
-          period: '',
-          features: [
-            'Unlimited images',
-            'Multi-location shoots',
-            'Model photography',
-            'Video production',
-            'Same-day delivery option',
-            'On-site photography',
-            'Custom props & styling',
-            'Dedicated photographer',
-            'Creative direction'
-          ]
         }
       ]}
       faq={[

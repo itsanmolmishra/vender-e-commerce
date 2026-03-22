@@ -102,7 +102,7 @@ export function AboutPage() {
           className="text-center mb-20"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-            About EcomHub
+            About Ceuki India Pvt Ltd
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We're on a mission to democratize e-commerce success. Since 2016, we've helped thousands of sellers 
@@ -142,7 +142,7 @@ export function AboutPage() {
           <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              EcomHub was founded in 2016 by a team of e-commerce veterans who saw sellers struggling to navigate 
+              Ceuki India Pvt Ltd was founded in 2016 by a team of e-commerce veterans who saw sellers struggling to navigate 
               the complex world of online marketplaces. What started as a small consulting service has grown into 
               India's most comprehensive e-commerce enablement platform.
             </p>
@@ -263,7 +263,7 @@ export function AboutPage() {
         >
           <h2 className="text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of successful sellers who trust EcomHub
+            Join thousands of successful sellers who trust Ceuki India Pvt Ltd
           </p>
           <button className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold text-lg hover:shadow-xl transition-all">
             Get Started Today

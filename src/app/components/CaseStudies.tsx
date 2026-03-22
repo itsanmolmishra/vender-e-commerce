@@ -7,7 +7,7 @@ export function CaseStudies() {
       company: 'StyleCraft Fashion',
       industry: 'Apparel & Accessories',
       image: 'https://images.unsplash.com/photo-1560128382-af550cccf1aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbHVzaCUyMHRlZGR5JTIwYmVhciUyMHRveXxlbnwxfHx8fDE3NzM4NTE4MjF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      challenge: 'Struggling with low visibility on multiple platforms and manual inventory management',
+      challenge: 'Struggling with low visibility on multiple Partnership and manual inventory management',
       results: [
         { icon: TrendingUp, label: 'Revenue Growth', value: '340%' },
         { icon: ShoppingBag, label: 'Monthly Orders', value: '5.2K' },
@@ -35,7 +35,7 @@ export function CaseStudies() {
       results: [
         { icon: TrendingUp, label: 'Revenue (6mo)', value: '₹45L' },
         { icon: ShoppingBag, label: 'Monthly Orders', value: '2.1K' },
-        { icon: Users, label: 'Platforms Live', value: '5' }
+        { icon: Users, label: 'Partnership Live', value: '5' }
       ],
       gradient: 'from-purple-500 to-indigo-600'
     }

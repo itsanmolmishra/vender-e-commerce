@@ -13,7 +13,7 @@ export function Stats() {
     {
       icon: ShoppingBag,
       value: '7+',
-      label: 'Platforms',
+      label: 'Partnership',
       description: 'Multi-channel coverage',
       gradient: 'from-purple-500 to-purple-600'
     },

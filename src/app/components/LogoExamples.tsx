@@ -8,7 +8,7 @@ export function LogoExamples() {
         {/* Title */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            EcomHub Logo Showcase
+            Ceuki India Pvt Ltd Logo Showcase
           </h1>
           <p className="text-xl text-gray-600">
             Professional tech startup branding - Shopify/Razorpay level quality
@@ -79,10 +79,10 @@ export function LogoExamples() {
               <p className="mt-6 text-sm text-blue-100 font-medium">Blue Background</p>
             </div>
 
-            {/* Purple Background */}
-            <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-12">
+            {/* Brand accent (royal blue → orange) */}
+            <div className="bg-gradient-to-br from-blue-700 to-orange-500 rounded-2xl p-12">
               <Logo variant="stacked" theme="dark" size="md" showTagline />
-              <p className="mt-6 text-sm text-purple-100 font-medium">Purple Background (Stacked)</p>
+              <p className="mt-6 text-sm text-orange-50 font-medium">Blue → orange gradient (stacked)</p>
             </div>
           </div>
         </section>
@@ -134,7 +134,7 @@ export function LogoExamples() {
               <div className="flex items-center gap-6">
                 <span className="text-sm text-gray-600">Home</span>
                 <span className="text-sm text-gray-600">Services</span>
-                <span className="text-sm text-gray-600">Pricing</span>
+                <span className="text-sm text-gray-600">Contact</span>
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white text-sm rounded-full">
                   Get Started
                 </button>
