@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { createPortal } from 'react-dom';
 import {
   MessageCircle,
   X,
@@ -913,6 +914,7 @@ function TypingDots() {
 
 export function ChatBot() {
   const navigate = useNavigate();
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<ChatMessage[]>([WELCOME]);
@@ -928,6 +930,10 @@ export function ChatBot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, open, typing, scrollToBottom]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const openContactForm = useCallback(() => {
     navigate('/contact', { state: { focusContactForm: true } });
@@ -1086,8 +1092,14 @@ export function ChatBot() {
     setOpen(false);
   };
 
-  return (
-    <div className="fixed bottom-4 right-4 z-[100] flex flex-col items-end gap-2 font-sans">
+  const chatUi = (
+    <div
+      className="fixed z-[100] flex flex-col items-end gap-2 font-sans right-3 bottom-3 sm:right-4 sm:bottom-4"
+      style={{
+        right: 'max(0.75rem, env(safe-area-inset-right))',
+        bottom: 'max(0.75rem, env(safe-area-inset-bottom))',
+      }}
+    >
       {open && (
         <div
           className="flex w-[min(100vw-2rem,420px)] max-h-[min(76vh,580px)] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl"
@@ -1277,4 +1289,7 @@ export function ChatBot() {
       </div>
     </div>
   );
+
+  if (!mounted) return null;
+  return createPortal(chatUi, document.body);
 }
