@@ -4,6 +4,7 @@ import { Award, BarChart, Globe, Package, Router, Shield, Sparkles, TrendingUp, 
 export interface ClientPageConfig {
   slug: string;
   brandName: string;
+  logoSrc: string;
   HeroIcon: LucideIcon;
   heroBadge: string;
   heroTitleLine1: string;
@@ -14,12 +15,17 @@ export interface ClientPageConfig {
   focusTitle: string;
   focusItems: string[];
   pageBgClass: string;
+  brandFrom: string;
+  brandTo: string;
+  brandSoftFrom: string;
+  brandSoftTo: string;
 }
 
 export const clientPageConfigs: Record<string, ClientPageConfig> = {
   'd-link': {
     slug: 'd-link',
     brandName: 'D-Link',
+    logoSrc: '/clients/d-link.svg',
     HeroIcon: Router,
     heroBadge: 'Ceuki × D-Link',
     heroTitleLine1: 'Scale D-Link networking &',
@@ -45,11 +51,16 @@ export const clientPageConfigs: Record<string, ClientPageConfig> = {
       'Multi-channel inventory alignment with partner policies',
       'Creative refreshes for routers, mesh, and smart home bundles',
     ],
-    pageBgClass: 'from-slate-50 via-blue-50/40 to-white',
+    pageBgClass: 'from-slate-50 via-cyan-50/40 to-white',
+    brandFrom: '#0A8AA6',
+    brandTo: '#0E7490',
+    brandSoftFrom: '#ECFEFF',
+    brandSoftTo: '#E0F2FE',
   },
   tenda: {
     slug: 'tenda',
     brandName: 'Tenda',
+    logoSrc: '/clients/tenda.svg',
     HeroIcon: Zap,
     heroBadge: 'Ceuki × Tenda',
     heroTitleLine1: 'Grow Tenda',
@@ -76,10 +87,15 @@ export const clientPageConfigs: Record<string, ClientPageConfig> = {
       'Performance dashboards for your account team',
     ],
     pageBgClass: 'from-orange-50/50 via-white to-slate-50',
+    brandFrom: '#F2581A',
+    brandTo: '#EA580C',
+    brandSoftFrom: '#FFF7ED',
+    brandSoftTo: '#FFEDD5',
   },
   portronix: {
     slug: 'portronix',
     brandName: 'Portronix',
+    logoSrc: '/clients/portronix.svg',
     HeroIcon: Package,
     heroBadge: 'Ceuki × Portronix',
     heroTitleLine1: 'Launch & scale',
@@ -105,11 +121,16 @@ export const clientPageConfigs: Record<string, ClientPageConfig> = {
       'Inventory and order cadence with your supply chain',
       'Always-on and burst ad mixes',
     ],
-    pageBgClass: 'from-purple-50/40 via-white to-blue-50/30',
+    pageBgClass: 'from-rose-50/40 via-white to-orange-50/20',
+    brandFrom: '#E4002B',
+    brandTo: '#B91C1C',
+    brandSoftFrom: '#FFF1F2',
+    brandSoftTo: '#FFE4E6',
   },
   'tp-link': {
     slug: 'tp-link',
     brandName: 'TP-Link',
+    logoSrc: '/clients/tp-link.svg',
     HeroIcon: Router,
     heroBadge: 'Ceuki × TP-Link',
     heroTitleLine1: 'Dominate listings for',
@@ -135,7 +156,11 @@ export const clientPageConfigs: Record<string, ClientPageConfig> = {
       'RMA and return analytics to improve listing truth',
       'Executive-ready monthly business reviews',
     ],
-    pageBgClass: 'from-blue-50/60 via-white to-cyan-50/40',
+    pageBgClass: 'from-cyan-50/60 via-white to-slate-50/40',
+    brandFrom: '#4BC0C8',
+    brandTo: '#2563EB',
+    brandSoftFrom: '#ECFEFF',
+    brandSoftTo: '#EFF6FF',
   },
 };
 

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-hidden="true">
-  <rect width="40" height="40" rx="8" fill="#6D28D9"/>
-  <text x="20" y="26" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="800" fill="#fff" letter-spacing="-0.03em">PR</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 110" role="img" aria-label="Portronics logo">
+  <rect x="0" y="16" width="78" height="78" rx="12" fill="#E4002B"/>
+  <path d="M20 33h25c14 0 24 9 24 23s-10 23-24 23H34v-16h10c6 0 10-3 10-7s-4-7-10-7H20z" fill="#fff"/>
+  <text x="100" y="72" font-family="Times New Roman, Georgia, serif" font-size="62" font-weight="500" fill="#111111" letter-spacing="0.5">PORTRONICS</text>
 </svg>

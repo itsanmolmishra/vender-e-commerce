@@ -31,7 +31,7 @@ export function OurClients() {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-stretch">
-          {clientNavItems.map(({ name, path }, idx) => (
+          {clientNavItems.map(({ path, logoSrc }, idx) => (
             <motion.div
               key={path}
               initial={{ opacity: 0, y: 12 }}
@@ -43,10 +43,10 @@ export function OurClients() {
               <button
                 type="button"
                 onClick={() => navigate(path)}
-                className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-6 sm:py-8 shadow-sm flex flex-col items-center justify-center gap-2 min-h-[5.5rem] group-hover:border-[var(--ceuki-bright)]/35 group-hover:shadow-md transition-all duration-300 text-center"
+                className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-6 sm:py-8 shadow-sm flex flex-col items-center justify-center gap-3 min-h-[5.5rem] group-hover:border-[var(--ceuki-bright)]/35 group-hover:shadow-md transition-all duration-300 text-center"
               >
-                <span className="text-base sm:text-lg font-bold tracking-tight text-gray-800 group-hover:text-[var(--ceuki-blue)] transition-colors">
-                  {name}
+                <span className="flex h-10 w-full items-center justify-center rounded-lg border border-gray-100 bg-white px-3 py-1">
+                  <img src={logoSrc} alt="" className="h-7 w-full object-contain" loading="lazy" decoding="async" />
                 </span>
                 <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-[var(--ceuki-blue)] opacity-0 group-hover:opacity-100 transition-opacity">
                   View page
@@ -60,3 +60,5 @@ export function OurClients() {
     </section>
   );
 }
+
+

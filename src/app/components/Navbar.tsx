@@ -602,16 +602,15 @@ export function Navbar() {
                               onClick={() => handleNavigation(c.path)}
                               className="flex w-full items-center gap-3 text-left px-3 py-2.5 rounded-xl text-sm font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                             >
-                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white border border-gray-100 p-0.5 shadow-sm overflow-hidden">
+                              <span className="flex h-9 w-[6.5rem] shrink-0 items-center justify-center rounded-lg bg-white border border-gray-100 px-1.5 py-0.5 shadow-sm overflow-hidden">
                                 <img
                                   src={c.logoSrc}
                                   alt=""
-                                  className="h-full w-full object-contain"
+                                  className="h-6 w-full object-contain"
                                   loading="lazy"
                                   decoding="async"
                                 />
                               </span>
-                              <span>{c.name}</span>
                             </button>
                           </li>
                         ))}
@@ -858,11 +857,11 @@ export function Navbar() {
                     onClick={() => handleNavigation(c.path)}
                     className="flex w-full items-center gap-3 text-left px-4 py-2.5 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg font-medium text-sm"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white border border-gray-100 p-0.5 shadow-sm overflow-hidden">
+                    <span className="flex h-9 w-[6.5rem] shrink-0 items-center justify-center rounded-lg bg-white border border-gray-100 px-1.5 py-0.5 shadow-sm overflow-hidden">
                       <img
                         src={c.logoSrc}
                         alt=""
-                        className="h-full w-full object-contain"
+                        className="h-6 w-full object-contain"
                         loading="lazy"
                         decoding="async"
                       />
@@ -939,3 +938,4 @@ export function Navbar() {
     </nav>
   );
 }
+

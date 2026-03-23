@@ -13,6 +13,7 @@ export function GenericClientPage({ config }: Props) {
   const navigate = useNavigate();
   const {
     HeroIcon,
+    logoSrc,
     heroBadge,
     heroTitleLine1,
     heroTitleGradient,
@@ -23,6 +24,10 @@ export function GenericClientPage({ config }: Props) {
     focusItems,
     pageBgClass,
     brandName,
+    brandFrom,
+    brandTo,
+    brandSoftFrom,
+    brandSoftTo,
   } = config;
 
   return (
@@ -38,7 +43,13 @@ export function GenericClientPage({ config }: Props) {
             className="text-center"
           >
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/80 backdrop-blur rounded-full border border-gray-200 shadow-sm mb-6">
-              <div className="w-11 h-11 bg-gradient-to-br from-[var(--ceuki-blue)] to-[var(--ceuki-bright)] rounded-xl flex items-center justify-center shadow-md">
+              <span className="flex h-8 w-[5.25rem] items-center justify-center rounded-md border border-gray-100 bg-white px-2">
+                <img src={logoSrc} alt="" className="h-5 w-full object-contain" loading="lazy" decoding="async" />
+              </span>
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center shadow-md"
+                style={{ backgroundImage: `linear-gradient(135deg, ${brandFrom}, ${brandTo})` }}
+              >
                 <HeroIcon className="w-5 h-5 text-white" />
               </div>
               <span className="font-bold text-gray-900">{heroBadge}</span>
@@ -46,7 +57,7 @@ export function GenericClientPage({ config }: Props) {
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-5 leading-tight">
               {heroTitleLine1}
-              <span className="block bg-gradient-to-r from-[var(--ceuki-blue)] via-[var(--ceuki-bright)] to-orange-500 bg-clip-text text-transparent mt-2">
+              <span className="block bg-clip-text text-transparent mt-2" style={{ backgroundImage: `linear-gradient(90deg, ${brandFrom}, ${brandTo})` }}>
                 {heroTitleGradient}
               </span>
             </h1>
@@ -57,7 +68,8 @@ export function GenericClientPage({ config }: Props) {
               <button
                 type="button"
                 onClick={() => navigate('/contact')}
-                className="group px-8 py-3.5 bg-gradient-to-r from-[var(--ceuki-blue)] to-[var(--ceuki-bright)] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
+                className="group px-8 py-3.5 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
+                style={{ backgroundImage: `linear-gradient(90deg, ${brandFrom}, ${brandTo})` }}
               >
                 Talk about {brandName}
                 <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -70,7 +82,8 @@ export function GenericClientPage({ config }: Props) {
                     document.getElementById('clients')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }, 100);
                 }}
-                className="px-8 py-3.5 bg-white text-gray-900 rounded-full font-semibold shadow-md border border-gray-200 hover:border-[var(--ceuki-bright)]/50 transition-all"
+                className="px-8 py-3.5 bg-white text-gray-900 rounded-full font-semibold shadow-md border border-gray-200 transition-all"
+                style={{ borderColor: `${brandFrom}4D` }}
               >
                 Back to Our Clients
               </button>
@@ -91,7 +104,7 @@ export function GenericClientPage({ config }: Props) {
                 transition={{ delay: index * 0.06 }}
                 className="text-center p-5 bg-white rounded-2xl shadow-sm border border-gray-100"
               >
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--ceuki-blue)] to-[var(--ceuki-bright)] bg-clip-text text-transparent mb-1">
+                <div className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent mb-1" style={{ backgroundImage: `linear-gradient(90deg, ${brandFrom}, ${brandTo})` }}>
                   {metric.value}
                 </div>
                 <div className="font-semibold text-gray-900 text-sm">{metric.label}</div>
@@ -126,8 +139,11 @@ export function GenericClientPage({ config }: Props) {
                   transition={{ delay: i * 0.05 }}
                   className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-[var(--ceuki-blue)]" />
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+                    style={{ backgroundImage: `linear-gradient(135deg, ${brandSoftFrom}, ${brandSoftTo})` }}
+                  >
+                    <Icon className="w-5 h-5" style={{ color: brandFrom }} />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{b.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{b.description}</p>
@@ -138,7 +154,7 @@ export function GenericClientPage({ config }: Props) {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-50/80 to-purple-50/50">
+      <section className="py-16 px-4" style={{ backgroundImage: `linear-gradient(90deg, ${brandSoftFrom}, ${brandSoftTo})` }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">{focusTitle}</h2>
           <ul className="space-y-4">
@@ -151,7 +167,7 @@ export function GenericClientPage({ config }: Props) {
                 transition={{ delay: i * 0.05 }}
                 className="flex gap-3 items-start text-gray-700"
               >
-                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 shrink-0 mt-0.5" style={{ color: brandFrom }} />
                 <span>{item}</span>
               </motion.li>
             ))}
@@ -166,7 +182,8 @@ export function GenericClientPage({ config }: Props) {
           <button
             type="button"
             onClick={() => navigate('/contact')}
-            className="px-10 py-4 bg-gradient-to-r from-[var(--ceuki-blue)] to-[var(--ceuki-bright)] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
+            className="px-10 py-4 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
+            style={{ backgroundImage: `linear-gradient(90deg, ${brandFrom}, ${brandTo})` }}
           >
             Get in touch
           </button>
